@@ -4,8 +4,8 @@ services:
     container_name: rbs_postgres
     restart: unless-stopped
     environment:
-      POSTGRES_USER: rbs_user
-      POSTGRES_PASSWORD: rbs_password
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
       POSTGRES_DB: resource_booking
     ports:
       # Host port 55432 to avoid clashing with any local PostgreSQL on 5432/5433.
@@ -13,7 +13,7 @@ services:
     volumes:
       - rbs_pgdata:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U rbs_user -d resource_booking"]
+      test: ["CMD-SHELL", "pg_isready -U root -d resource_booking"]
       interval: 5s
       timeout: 5s
       retries: 5

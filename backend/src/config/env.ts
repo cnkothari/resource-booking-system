@@ -23,8 +23,8 @@ export const env = Object.freeze({
   db: {
     host: process.env.DB_HOST ?? 'localhost',
     port: toInt(process.env.DB_PORT, 5432),
-    username: process.env.DB_USERNAME ?? 'rbs_user',
-    password: process.env.DB_PASSWORD ?? 'rbs_password',
+    username: process.env.DB_USERNAME ?? 'root',
+    password: process.env.DB_PASSWORD ?? 'root',
     database: process.env.DB_DATABASE ?? 'resource_booking',
     synchronize: toBool(process.env.DB_SYNCHRONIZE, true),
     logging: toBool(process.env.DB_LOGGING, false),
