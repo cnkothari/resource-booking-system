@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 /**
- * Centralised, typed access to environment configuration.
+ * Centralised, typed access to environment configuration. 
  * Kept as a plain frozen object (functional style — no config class).
  */
 const toBool = (value: string | undefined, fallback: boolean): boolean => {
